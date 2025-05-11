@@ -12,26 +12,31 @@ body {
     margin: 0;
 }
 
-ul {
+nav {
     background-color: var(--azul-bebe);
+    padding: 16px 32px;
+}
+
+nav ul {
     display: flex;
     justify-content: space-between;
     list-style-type: none;
     align-items: center;
-    padding: 16px 32px;
-    margin: 0;
+    padding: 0; /* Removi o padding padrão da ul */
+    margin: 0; /* Removi a margem padrão da ul */
 }
 
-a {
+nav ul li a {
     color: var(--azul-meianoite);
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s;
-}
-
-nav a {
     font-size: 18px;
     margin-left: 20px;
+}
+
+nav ul li:first-child a {
+    margin-left: 0; /* Remove a margem esquerda do primeiro item */
 }
 
 nav a:hover {
@@ -40,7 +45,7 @@ nav a:hover {
 
 header {
     background-color: var(--azul-bebe);
-    padding: 40px 20px;
+    padding: 40px 20px; /* Adicionei padding horizontal para espaçamento interno */
     text-align: center;
 }
 
@@ -57,17 +62,28 @@ h1 {
     margin: 10px 0;
 }
 
-main {
-    background-color: var(--branco);
-    padding: 40px 20px;
+.container {
+    padding: 0 50px; /* Mantive o padding no container para o conteúdo principal */
 }
 
+main {
+    background-color: var(--branco);
+    padding: 40px 0; /* Ajustei o padding vertical do main */
+}
+
+main section {
+    padding: 0 20px; /* Adicionei padding horizontal nas seções do main */
+    margin-bottom: 30px; /* Adicionei margem inferior entre as seções */
+}
+
+main section:last-child {
+    margin-bottom: 0; /* Remove a margem inferior da última seção */
 }
 
 footer {
     background-color: var(--azul-meianoite);
     color: var(--branco);
-    padding: 20px 0;
+    padding: 20px; /* Adicionei padding horizontal para espaçamento interno */
     margin-top: 40px;
 }
 
@@ -99,33 +115,6 @@ footer {
 .social-links p {
     margin: 0;
     font-size: 14px;
-}
-
-
-footer img {
-    width: 40px;
-    height: 40px;
-    margin: 0 10px;
-}
-
-footer a {
-    color: var(--branco);
-    margin: 10px;
-    text-align: center;
-    transition: color 0.3s;
-}
-
-footer a:hover {
-    color: var(--azul-bebe);
-}
-
-footer p {
-    margin-top: 10px;
-}
-
-
-.container {
-    padding: 0 50px;
 }
 
 .contact-form input,
@@ -161,6 +150,13 @@ button:hover {
     background-color: var(--azul-meianoite);
     color: var(--branco);
 }
+
+main ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-top: 10px;
+}
+
 main ul li {
     margin-bottom: 10px;
 }
@@ -174,26 +170,7 @@ main ul li a {
 main ul li a:hover {
     color: var(--azul-bebe);
 }
-.project-list {
-    list-style-type: disc;
-    padding-left: 20px;
-    margin-top: 10px;
-}
 
-.project-list li {
-    margin-bottom: 12px;
-}
-
-.project-list a {
-    font-size: 16px;
-    color: var(--azul-meianoite);
-    text-decoration: underline;
-    transition: color 0.3s;
-}
-
-.project-list a:hover {
-    color: var(--azul-bebe);
-}
 .contact-section {
     background-color: var(--azul-bebe);
     padding: 40px 20px;
